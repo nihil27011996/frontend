@@ -1,4 +1,5 @@
 import styles from "./HomePage.module.css";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
@@ -8,12 +9,15 @@ const HomePage = () => {
         <div className={styles.headerContent}>
           <h1 className={styles.logo}>Finance</h1>
           <div className={styles.headerButtons}>
-            <button className={`${styles.btn} ${styles.btnOutline}`}>
+            <Link to="/login" className={`${styles.btn} ${styles.btnOutline}`}>
               Log In
-            </button>
-            <button className={`${styles.btn} ${styles.btnPrimary}`}>
+            </Link>
+            <Link
+              to="/register"
+              className={`${styles.btn} ${styles.btnPrimary}`}
+            >
               Register
-            </button>
+            </Link>
           </div>
         </div>
       </header>
@@ -26,16 +30,18 @@ const HomePage = () => {
             Track your expenses, set budgets, and achieve your financial goals.
           </p>
           <div className={styles.heroButtons}>
-            <button
+            <Link
+              to="/login"
               className={`${styles.btn} ${styles.btnPrimary} ${styles.btnLarge}`}
             >
               Log In
-            </button>
-            <button
+            </Link>
+            <Link
+              to="/register"
               className={`${styles.btn} ${styles.btnPrimary} ${styles.btnLarge}`}
             >
               Register
-            </button>
+            </Link>
           </div>
         </div>
       </section>
